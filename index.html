@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>🎈Feliz Aniversário🎈</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        .present {
+            width: 300px;
+            height: 300px;
+            background: url('present.png') no-repeat center center;
+            background-size: cover;
+        }
+
+        .open-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff4757;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="present"></div>
+    <button class="open-button" onclick="openGift()">Abrir</button>
+
+    <script>
+        function openGift() {
+    window.location.href = "start.html?playMusic=true";
+}
+    </script>
+</body>
+
+</html>
