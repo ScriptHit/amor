@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>🎈Feliz Aniversário🎈</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Lobster', cursive;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f2f2f2;
+            background-color: #fce4ec;
+            margin: 0;
+            transition: background-color 0.5s;
         }
 
         .present {
-            width: 300px;
-            height: 300px;
+            width: 50vw;
+            max-width: 300px;
+            height: 50vw;
+            max-height: 300px;
             background: url('present.png') no-repeat center center;
-            background-size: cover;
+            background-size: contain;
+            transition: transform 0.3s;
         }
 
         .open-button {
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #ff4757;
+            background-color: #ff4081;
             color: #ffffff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
+        .open-button:hover, .open-button:focus {
+            background-color: #f50057;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .present, .open-button {
+                width: 70vw;
+                height: 70vw;
+            }
+        }
     </style>
 </head>
-
 <body>
 
-    <div class="present"></div>
+    <div class="present" role="img" aria-label="Imagem de um presente"></div>
     <button class="open-button" onclick="openGift()">Abrir</button>
 
     <script>
         function openGift() {
-    window.location.href = "start.html?playMusic=true";
-}
+            // Adicionar uma animação ou feedback visual aqui
+            window.location.href = "start.html?playMusic=true";
+        }
     </script>
 </body>
-
 </html>
